@@ -1,1 +1,1 @@
-app: https://angiee39.github.io/anecdotes/
+DEMO: https://angiee39.github.io/anecdotes/

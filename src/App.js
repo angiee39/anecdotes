@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 const Anecdote = (props) => {
   return (
     <div>
-      <div>
+      <h4>
         {props.anecdotes[props.selected]}
-      </div>
+      </h4>
       <div>
         <p>has {props.votes[props.selected]} votes</p>
       </div>
@@ -50,11 +50,11 @@ const App = () => {
   const bestAnecdote = votes.indexOf(Math.max(...votes));
   
   return (
-    <div>
+    <div className="container">
       <h1>Anecdote of the day</h1>
       <Anecdote votes={votes} selected={selected} anecdotes={anecdotes} />
       <Button setSelected={setSelected} selected={selected} setVotes={setVotes} votes={votes} />
-      <h1>Anecdote with most votes</h1>
+      <h2>Anecdote with most votes</h2>
       <Anecdote votes={votes} selected={bestAnecdote} anecdotes={anecdotes} />
     </div>
   )
